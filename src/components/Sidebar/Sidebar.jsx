@@ -49,8 +49,10 @@ function Sidebar({ isOpen, setIsOpen }) {
                 <li className="sidebar-header">{section.header}</li>
               )}
               {section.items.map((item, index) => {
-                // const isActive = window.location.pathname === item.href;
-                const isActive = location.pathname === item.href;
+                const fullHref = `${
+                  import.meta.env.BASE_URL
+                }${item.href.replace(/^\//, "")}`;
+                const isActive = location.pathname === fullHref;
                 return (
                   <li
                     className={"sidebar-item " + (isActive ? "active" : "")}
@@ -63,7 +65,9 @@ function Sidebar({ isOpen, setIsOpen }) {
                     >
                       {iconMap[item.icon]}
                     </span>
-                    <NavLink to={item.href} className={"anchor"}>{item.label}</NavLink>
+                    <NavLink to={fullHref} className={"anchor"}>
+                      {item.label}
+                    </NavLink>
                   </li>
                 );
               })}

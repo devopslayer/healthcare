@@ -1,0 +1,122 @@
+.sidebar-container {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 100%;
+  height: 100%;
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.sidebar .brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.sidebar .brand-name > span:first-child {
+  color: var(--primary-color);
+}
+
+.sidebar .sidebar-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .sidebar-menu ul {
+  color: var(--text-muted);
+}
+
+.sidebar .sidebar-menu li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  transition: color 0.15s ease-in-out;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sidebar .sidebar-menu li.active {
+  color: var(--secondary-color);
+  font-weight: bold;
+  box-shadow: var(--card-shadow);
+}
+
+.sidebar .sidebar-menu .sidebar-header {
+  cursor: default;
+}
+
+.sidebar .sidebar-menu .sidebar-item:hover {
+  color: var(--primary-color);
+}
+
+.sidebar .sidebar-menu li .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius);
+}
+
+.rotate-icon {
+  transform: rotate(90deg);
+  transition: transform 0.15s ease-in-out;
+}
+
+.anchor {
+  width: -webkit-fill-available;
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+  }
+
+  .sidebar-container.show {
+    left: 0;
+    width: 100%;
+    background-color: blur(0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    transition: left 0.15s ease-in-out;
+  }
+
+  .sidebar.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .sidebar .sidebar-menu li {
+    padding: 8px;
+  }
+}

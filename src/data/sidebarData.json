@@ -1,0 +1,22 @@
+[
+  {
+    "header": "General",
+    "items": [
+      { "icon": "FaThLarge", "label": "Dashboard", "href": "/dashboard" },
+      { "icon": "FaHistory", "label": "History", "href": "/history" },
+      { "icon": "FaCalendar", "label": "Calendar", "href": "/calendar" },
+      { "icon": "FaPlusSquare", "label": "Appointments", "href": "/appointments" },
+      { "icon": "FaChartLine", "label": "Statistics", "href": "/statistics" }
+    ]
+  },
+  {
+    "header": "Tools",
+    "items": [
+      { "icon": "FaCommentDots", "label": "Chat", "href": "/chat" },
+      { "icon": "FaPhone", "label": "Support", "href": "/support" }
+    ]
+  },
+  {
+    "items": [{ "icon": "FaCog", "label": "Settings", "href": "/settings" }]
+  }
+]

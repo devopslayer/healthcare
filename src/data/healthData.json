@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "organ": "Lungs",
+    "imageKey": "lungs",
+    "date": "26 Oct 2023",
+    "progress": 70,
+    "color": "#800000"
+  },
+  {
+    "id": 2,
+    "organ": "Teeth",
+    "imageKey": "teeth",
+    "date": "26 Oct 2023",
+    "progress": 70,
+    "color": "#4CAF50"
+  },
+  {
+    "id": 3,
+    "organ": "Bone",
+    "imageKey": "bone",
+    "date": "26 Oct 2023",
+    "progress": 70,
+    "color": "#FFA500"
+  }
+]

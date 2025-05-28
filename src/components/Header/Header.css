@@ -1,0 +1,17 @@
+/* Later will update it according to the design needs. */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 60px;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: flex-end;
+    }
+}

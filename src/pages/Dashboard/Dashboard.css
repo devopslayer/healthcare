@@ -1,0 +1,201 @@
+.dashboard {
+  width: 100%;
+  height: 100%;
+  color: var(--secondary-color);
+  overflow: hidden;
+}
+
+.dashboard-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.dashboard .overview-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-color: var(--bg-light);
+}
+
+.dashboard .overview-content .overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+.dashboard .overview-content .overview-header h2 {
+  font-size: 1.5rem;
+}
+
+.dashboard .overview-content .overview-header span {
+  font-size: 0.9rem;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.dashboard .activity-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--card-shadow);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.analytics {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+}
+
+.analytics-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.analytics-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.analytics-main-card .card-title {
+  width: fit-content;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.analytics-main-card img {
+  width: 100%;
+  height: 340px;
+  border-radius: var(--border-radius);
+}
+
+.dashboard .overview-content .overview-header span:hover,
+.analytics-main-card .card-title:hover {
+  color: var(--primary-color);
+}
+
+.analytics-submain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.analytics-submain .analytics-submain-card {
+  width: 200px;
+  height: auto;
+}
+
+.analytics-submain .analytics-submain-card .analytics-submain-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.analytics-submain .analytics-submain-card .analytics-submain-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.analytics-submain .analytics-submain-card .analytics-submain-header img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.analytics-submain .analytics-submain-card .analytics-submain-header h5 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.analytics-submain .analytics-submain-card .analytics-submain-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.analytics-submain .analytics-submain-card .analytics-submain-body p {
+  color: var(--text-muted);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-dark);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.15s ease-in-out;
+}
+
+.analytics-submain-footer {
+  width: fit-content;
+  position: relative;
+  bottom: 0;
+  right: -150px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 10px;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+.analytics-submain-footer:hover {
+  color: var(--primary-color);
+}
+
+.hidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard .dashboard-content {
+    flex-direction: column;
+  }
+
+  .dashboard .overview-content {
+    padding: 0 20px;
+  }
+
+  .dashboard .activity-content {
+    padding: 0 20px;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
